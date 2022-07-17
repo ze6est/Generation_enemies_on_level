@@ -17,14 +17,16 @@ public class Spawner : MonoBehaviour
         _maxNumberSpawnPoint = _spawnPoints.Length;
     }
 
-    void Start()
+    private void Start()
     {
         StartCoroutine(CreateEnemy());
     }
 
     private IEnumerator CreateEnemy()
     {
-        while(_isSpawnerActive)
+        WaitForSeconds waitForSeconds = new WaitForSeconds(_delay);
+
+        while (_isSpawnerActive)
         {
             if (_numberSpawnPoint == _maxNumberSpawnPoint)
                 _numberSpawnPoint = 0;
@@ -32,7 +34,7 @@ public class Spawner : MonoBehaviour
             Instantiate(_enemy, _spawnPoints[_numberSpawnPoint].transform.position, Quaternion.identity);
             _numberSpawnPoint++;
 
-            yield return new WaitForSeconds(_delay);
+            yield return new waitForSeconds;
         }        
     }    
 }

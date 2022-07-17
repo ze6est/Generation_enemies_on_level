@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DestroyEnemyTrigger : MonoBehaviour
+public class Destroyer : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
