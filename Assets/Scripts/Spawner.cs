@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
             Instantiate(_enemy, _spawnPoints[_numberSpawnPoint].transform.position, Quaternion.identity);
             _numberSpawnPoint++;
 
-            yield return new waitForSeconds;
+            yield return waitForSeconds;
         }        
     }    
 }
