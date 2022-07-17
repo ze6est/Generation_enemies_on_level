@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 1216290847}
   - component: {fileID: 1216290846}
   m_Layer: 0
-  m_Name: DestroyEnemyTrigger
+  m_Name: Destroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
